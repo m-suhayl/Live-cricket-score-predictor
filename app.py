@@ -5,7 +5,7 @@ import pickle
 import streamlit as st
 from PIL import Image
 
-pickle_in = open('score_prediction1.pkl', 'rb')
+pickle_in = open('score_prediction-c.pkl', 'rb')
 pickler = pickle.load(pickle_in)
 
 def predict_score(Battingteam,Bowlingteam,Currentscore,overs,Wickets,RunsinLast_5, WicketsinLast_5):
