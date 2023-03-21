@@ -3,10 +3,12 @@ import pandas as pd
 import numpy as np
 import pickle
 import streamlit as st
+import bz2 
 from PIL import Image
 
-pickle_in = open('score_prediction-c.pkl', 'rb')
-pickler = pickle.load(pickle_in)
+ifile = bz2.BZ2File('score_prediction-c.pkl','rb')
+pickler = pickle.load(ifile)
+
 
 def predict_score(Battingteam,Bowlingteam,Currentscore,overs,Wickets,RunsinLast_5, WicketsinLast_5):
   temp_array = list()
