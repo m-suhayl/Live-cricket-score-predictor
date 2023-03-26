@@ -63,16 +63,16 @@ def main():
       	
 	st.title("Cricket Score Predictor !")
 
-	st.header(" Predict the final score of a cricket match- during the match")
+	st.header(" Predict the Final Score of a Cricket Match- During the Match! ")
 
 	Battingteam = st.selectbox("Batting Team:", ['India','England','Australia','Sri Lanka','Pakistan','New Zealand','South Africa','West Indies'])	
 	Bowlingteam = st.selectbox("Bowling Team:", ['India','England','Australia','Sri Lanka','Pakistan','New Zealand','South Africa','West Indies'])
 
-	Currentscore= st.number_input('Enter the current score', min_value=0, step=1)
-	overs = st.number_input('Enter the overs bowled', min_value=5, max_value=20, step=1)
-	Wickets = st.number_input("Enter the wickets taken so far", min_value=0, max_value=9 , step=1)
-	RunsinLast_5 = st.number_input("Enter the runs scored in last 5 overs", min_value=0, step=1)
-	WicketsinLast_5 = st.number_input("Enter the wickets taken in last 5 overs", min_value=0, max_value=9 , step=1)
+	Currentscore= st.number_input('Enter the Current Score', min_value=0, step=1)
+	overs = st.number_input('Enter the Overs Bowled', min_value=5, max_value=20, step=1)
+	Wickets = st.number_input("Enter the Wickets Taken so far", min_value=0, max_value=9 , step=1)
+	RunsinLast_5 = st.number_input("Enter the Runs Scored in Last 5 Overs", min_value=0, step=1)
+	WicketsinLast_5 = st.number_input("Enter the Wickets Taken in Last 5 Overs", min_value=0, max_value=9 , step=1)
 	result =""
 	if st.button("Predict"):
 		result = predict_score(Battingteam,Bowlingteam,Currentscore,overs,Wickets,RunsinLast_5, WicketsinLast_5)
